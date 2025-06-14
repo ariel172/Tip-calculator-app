@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <script src="script/script.js"></script>
   
   <title>Frontend Mentor | Tip calculator app</title>
-
 </head>
 <body>
   <main>
@@ -17,39 +16,59 @@
       <div class="logo">
         <img src="images/logo.svg" alt="Apps Logo">
       </div>
-      <div>
-        <section class="info">
-          <label for="price">Bill</label>
-          <img src="/images/icon-dollar.svg"><input type="text" id="price" name="price-user">
-           
 
-            Select Tip %
-            5%
-            10%
-            15%
-            25%
-            50%
-            Custom
+        <section class="formulaire">
+          <div class="champ-prix">
+            <label for="prix">Bill</label>
+            <input type="text" id="prix" name="bill">
+          </div>
 
-            Number of People
+          <div class="choix-pourcentage" role="group" aria-label="Bouton pour choisir le pourcentage des pourboires">
+            <label for="pourcentage">Select Tip %</label>
+            <button type="button" class="choix-pourcentage__btn">5%</button>
+            <button type="button" class="choix-pourcentage__btn">10%</button>
+            <button type="button" class="choix-pourcentage__btn">15%</button>
+            <button type="button" class="choix-pourcentage__btn">25%</button>
+            <button type="button" class="choix-pourcentage__btn">50%</button>
+            <input type="text" placeholder="Custom" class="choix-pourcentage__custom">
+          </div>
+
+          <div class="champ-personnes">
+            <label for="nb-personnes">Number of People</label>
+            <input type="text" id="nb-personnes" name="nb-personnes">
+          </div>
         </section>
-        <section class="calcule">
-                  
-          Tip Amount
-          / person
 
-          Total
-          / person
+        <section class="resultats">
+          <div class="resultats__pourboire">
+            <div class="resultats__label">
+              <p class="resultats__text">Tip Amount</p>
+              <span class="resultats__unit">/ person</span>
+            </div>
+            <span class="resultats__montant">
+              <img src="images/icon-dollar.svg" alt="Dollar icon">0
+            </span>
+          </div>
 
-          Reset
+          <div class="resultats__total">
+            <div class="resultats__label">
+              <p class="resultats__text">Total</p>
+              <span class="resultats__unit">/ person</span>
+            </div>
+            <span class="resultats__total--montant">
+              <img src="images/icon-dollar.svg" alt="icon-dollar">0
+            </span>
+          </div>
+          <button type="reset" class="btn-reset">Reset</button>
         </section>
-      </div>
     </div>
   </main>
-  
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/ariel172">Yamien Ariel</a>.
+    Challenge by 
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by 
+    <a href="https://github.com/ariel172" class="attribution__link">Yamien Ariel</a>.
   </footer>
 </body>
 </html>
