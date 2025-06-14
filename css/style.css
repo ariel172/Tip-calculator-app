@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/*Primary*/
+/*Neutra*/
+/*form inputs*/
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attributiona {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
