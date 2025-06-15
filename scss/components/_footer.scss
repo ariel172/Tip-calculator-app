@@ -1,6 +1,9 @@
+@use "../base/variables" as *;
+
+/*Inforamtion sur le développeur et le challenge*/
 .attribution { 
     font-size: 11px; text-align: center;
-    &a { 
-        color: hsl(228, 45%, 44%); 
+    &__link { 
+        color: $Green-400; 
     }
 }

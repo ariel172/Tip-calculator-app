@@ -1,5 +1,11 @@
 @use "base/fonts";
 @use "base/global";
-@use "base/variables";
+@use "base/variables" as *;
+@use "base/reset";
 
+@use "components/logo";
+@use "components/form";
+@use "components/resultats.scss";
 @use "components/footer";
+
+@use "layout/container";
