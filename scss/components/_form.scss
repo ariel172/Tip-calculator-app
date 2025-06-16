@@ -1,1 +1,32 @@
 @use "../base/variables" as *;
+
+.formulaire{
+    .champ-prix{
+        display: flex;
+        flex-direction: column;
+        label{
+            padding-left: $paddingSpecial;
+        }
+        .prix{
+            font-family: "Space Mono", monospace;
+            color: $Green-900;
+            font-weight: $fontWeight;
+            width: 80%;
+            padding: 0.4rem;
+            align-self: center;
+            font-size: $fontSizeInput;
+            background-image: url("/images/icon-dollar.svg");
+            background-repeat: no-repeat;
+            background-position: left 0.7rem center; // Ajoute une marge à gauche pour l'icône
+            border: none;
+            border-radius: 0.2rem;
+            background-color: $Grey-50;
+            text-align: right;
+            &:focus {
+                border: 2px solid $Green-400;
+                outline: none;
+                background-color: $Grey-50;
+            }
+        }
+    }
+}
