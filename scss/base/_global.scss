@@ -4,4 +4,12 @@
 body {
   font-family: "Space Mono", monospace;
   background-color: $Grey-200;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $Grey-500;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
 }
