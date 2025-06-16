@@ -3,10 +3,21 @@
 /*Primary*/
 /*Neutra*/
 /*form inputs*/
+/*Font size*/
+/*Font weight*/
+/*padding special*/
 /*Style géneral de la page*/
 body {
   font-family: "Space Mono", monospace;
   background-color: hsl(185, 41%, 84%);
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 /*Effacement des marge par défaut du navigateur*/
@@ -16,6 +27,41 @@ body {
   box-sizing: border-box;
 }
 
+.logo {
+  justify-content: center;
+  align-self: center;
+  margin: 2rem 0 2rem 0;
+}
+
+.formulaire .champ-prix {
+  display: flex;
+  flex-direction: column;
+}
+.formulaire .champ-prix label {
+  padding-left: 2.2rem;
+}
+.formulaire .champ-prix .prix {
+  font-family: "Space Mono", monospace;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  width: 80%;
+  padding: 0.4rem;
+  align-self: center;
+  font-size: 1.5rem;
+  background-image: url("/images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: left 0.7rem center;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: hsl(189, 47%, 97%);
+  text-align: right;
+}
+.formulaire .champ-prix .prix:focus {
+  border: 2px solid hsl(172, 67%, 45%);
+  outline: none;
+  background-color: hsl(189, 47%, 97%);
+}
+
 /*Inforamtion sur le développeur et le challenge*/
 .attribution {
   font-size: 11px;
@@ -23,6 +69,13 @@ body {
 }
 .attribution__link {
   color: hsl(172, 67%, 45%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 100%, 100%);
+  padding: 2.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
