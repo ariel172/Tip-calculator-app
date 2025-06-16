@@ -1,0 +1,37 @@
+@use "../base/variables" as *;
+@use "../components/logo";
+@use "../components/form";
+@use "../components/resultats.scss";
+
+
+/*Ecran supérieur a 1024px Desktop*/
+@media (min-width:1024px) {
+    .logo{
+        margin: 0.7rem 0 .3rem 0;
+    }
+    .formulaire{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .choix-pourcentage{
+            &__grid {
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+        .champ-personnes{
+            &__erreur{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    .resultats{
+        width: 70%;
+        height: 25rem;
+        margin-left: 1rem;
+        justify-content: space-between;
+        &__total{
+            margin-top: -10rem;
+        }
+    }
+}
