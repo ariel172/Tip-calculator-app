@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="script/unitaires.js" defer></script>
+  <script src="script/calcul.js" defer></script>
+  <script src="script/ui.js" defer></script>
+  <script src="script/event.js" defer></script>
   <script src="script/script.js" defer></script>
+
   
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
@@ -36,7 +41,7 @@
 
           <div class="champ-personnes">
             <div class="champ-personnes__erreur">
-              <label for="nb-personnes">Number of People</label> <span class="erreur">Can't be zero</span>
+              <label for="nb-personnes">Number of People</label><span class="erreur-message">Can't be zero</span>
             </div>
             <input type="text" id="nb-personnes" name="nb-personnes" class="nb-personnes" placeholder="0">
           </div>
@@ -58,7 +63,7 @@
             </div>
             <span class="resultats__montant total">$0.00</span>
           </div>
-          <button type="reset" class="btn-reset">RESET</button>
+          <button type="reset" class="btn-reset" disabled>RESET</button>
         </section>
     </div>
   </main>
