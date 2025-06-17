@@ -4,29 +4,108 @@
     .champ-prix{
         display: flex;
         flex-direction: column;
-        label{
-            padding-left: $paddingSpecial;
-        }
+        margin-bottom: 1rem;
         .prix{
-            font-family: "Space Mono", monospace;
-            color: $Green-900;
-            font-weight: $fontWeight;
-            width: 80%;
-            padding: 0.4rem;
-            align-self: center;
-            font-size: $fontSizeInput;
             background-image: url("/images/icon-dollar.svg");
-            background-repeat: no-repeat;
-            background-position: left 0.7rem center; // Ajoute une marge à gauche pour l'icône
-            border: none;
-            border-radius: 0.2rem;
-            background-color: $Grey-50;
+        }
+    }
+    .choix-pourcentage{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+        &__label {
+            align-self: flex-start; 
+            font-size: $fontSize;
+        }
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 1rem;
+            width: 92%;
+        }
+
+        &__btn{
+            cursor: pointer;
+            color: $White;
+            background-color: $Green-900;
+            &.cliquer{
+                background-color: $Green-400;
+                color: $Green-900;
+            }
+            &:hover{
+                background-color: rgba($color: $Green-400, $alpha: .6);
+                color: rgba($color: black, $alpha: 1.2);
+            }
+        }
+        &__custom{
             text-align: right;
-            &:focus {
+            color: $Green-900;
+            background-color: $Grey-50;
+            font-size: $fontSize*1.2;
+            cursor: pointer;
+            &:hover{
+                border: 2px solid $Green-400;
+            }
+             &:focus {
                 border: 2px solid $Green-400;
                 outline: none;
                 background-color: $Grey-50;
             }
         }
+        &__btn,
+        &__custom{
+            width: 100%;
+            padding: 0.6rem;
+            margin: 0;
+            font-weight: $fontWeight;
+            font-family: "Space Mono", monospace;
+            border: none;
+            border-radius: 0.2rem;
+            height: 3rem;
+        }
+    }
+
+    .champ-personnes{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        .nb-personnes{
+            background-image: url("/images/icon-person.svg");
+        }
+        .erreur{
+            display: none;
+            padding-left: 2.2rem;
+            font-size: 0.7rem;
+            color: rgba($color: #FF4500, $alpha: .7);
+        }
+        .erreur-coleur{
+            border: 2px solid #FF4500;
+        }
+    }
+
+    .prix, 
+    .nb-personnes{
+        font-family: "Space Mono", monospace;
+        color: $Green-900;
+        font-weight: $fontWeight;
+        width: 95%;
+        padding: 0.4rem;
+        align-self: center;
+        font-size: $fontSizeInput;
+        background-repeat: no-repeat;
+        background-position: left 0.7rem center; // Ajoute une marge à gauche pour l'icône
+        border: none;
+        border-radius: 0.2rem;
+        background-color: $Grey-50;
+        text-align: right;
+        &:focus {
+            border: 2px solid $Green-400;
+            outline: none;
+            background-color: $Grey-50;
+        }
+    }
+    label{
+        padding-left: $paddingSpecial;
     }
 }

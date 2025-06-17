@@ -1,1 +1,48 @@
 @use "../base/variables" as *;
+
+.resultats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    background-color: $Green-900;
+    padding: 1rem;
+    width: 92%;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    &__text{
+        color: $White;
+        font-size: 80%;
+    }
+    &__unit{
+        font-size: .9rem;
+        color: $Grey-400;
+    }
+    &__total, 
+    &__pourboire{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+    .btn-reset{
+        font-weight: $fontWeight;
+        color: $Green-900;
+        padding: 0.6rem;
+        background-color: rgba($color: $Green-400, $alpha: .6);
+        border: none;
+        border-radius: 0.3rem;
+        width: 90%;
+        margin-top: 1rem;
+        align-self: center;
+        cursor: pointer;
+        &:hover{
+            background-color: $Green-400;
+        }
+    }
+    &__montant{
+        display: block;
+        font-size: $fontSize*1.5;
+        color: $Green-400;
+    }
+}

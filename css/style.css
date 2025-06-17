@@ -36,19 +36,91 @@ main {
 .formulaire .champ-prix {
   display: flex;
   flex-direction: column;
-}
-.formulaire .champ-prix label {
-  padding-left: 2.2rem;
+  margin-bottom: 1rem;
 }
 .formulaire .champ-prix .prix {
+  background-image: url("/images/icon-dollar.svg");
+}
+.formulaire .choix-pourcentage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+.formulaire .choix-pourcentage__label {
+  align-self: flex-start;
+  font-size: 1rem;
+}
+.formulaire .choix-pourcentage__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 92%;
+}
+.formulaire .choix-pourcentage__btn {
+  cursor: pointer;
+  color: hsl(0, 100%, 100%);
+  background-color: hsl(183, 100%, 15%);
+}
+.formulaire .choix-pourcentage__btn.cliquer {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.formulaire .choix-pourcentage__btn:hover {
+  background-color: rgba(37.8675, 191.6325, 171.1305, 0.6);
+  color: black;
+}
+.formulaire .choix-pourcentage__custom {
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 47%, 97%);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.formulaire .choix-pourcentage__custom:hover {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+.formulaire .choix-pourcentage__custom:focus {
+  border: 2px solid hsl(172, 67%, 45%);
+  outline: none;
+  background-color: hsl(189, 47%, 97%);
+}
+.formulaire .choix-pourcentage__btn, .formulaire .choix-pourcentage__custom {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  border: none;
+  border-radius: 0.2rem;
+  height: 3rem;
+}
+.formulaire .champ-personnes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.formulaire .champ-personnes .nb-personnes {
+  background-image: url("/images/icon-person.svg");
+}
+.formulaire .champ-personnes .erreur {
+  display: none;
+  padding-left: 2.2rem;
+  font-size: 0.7rem;
+  color: rgba(255, 69, 0, 0.7);
+}
+.formulaire .champ-personnes .erreur-coleur {
+  border: 2px solid #FF4500;
+}
+.formulaire .prix,
+.formulaire .nb-personnes {
   font-family: "Space Mono", monospace;
   color: hsl(183, 100%, 15%);
   font-weight: 700;
-  width: 80%;
+  width: 95%;
   padding: 0.4rem;
   align-self: center;
   font-size: 1.5rem;
-  background-image: url("/images/icon-dollar.svg");
   background-repeat: no-repeat;
   background-position: left 0.7rem center;
   border: none;
@@ -56,10 +128,60 @@ main {
   background-color: hsl(189, 47%, 97%);
   text-align: right;
 }
-.formulaire .champ-prix .prix:focus {
+.formulaire .prix:focus,
+.formulaire .nb-personnes:focus {
   border: 2px solid hsl(172, 67%, 45%);
   outline: none;
   background-color: hsl(189, 47%, 97%);
+}
+.formulaire label {
+  padding-left: 1rem;
+}
+
+.resultats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  background-color: hsl(183, 100%, 15%);
+  padding: 1rem;
+  width: 92%;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+.resultats__text {
+  color: hsl(0, 100%, 100%);
+  font-size: 80%;
+}
+.resultats__unit {
+  font-size: 0.9rem;
+  color: hsl(184, 14%, 56%);
+}
+.resultats__total, .resultats__pourboire {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.resultats .btn-reset {
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  padding: 0.6rem;
+  background-color: rgba(37.8675, 191.6325, 171.1305, 0.6);
+  border: none;
+  border-radius: 0.3rem;
+  width: 90%;
+  margin-top: 1rem;
+  align-self: center;
+  cursor: pointer;
+}
+.resultats .btn-reset:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+.resultats__montant {
+  display: block;
+  font-size: 1.5rem;
+  color: hsl(172, 67%, 45%);
 }
 
 /*Inforamtion sur le développeur et le challenge*/
@@ -71,11 +193,49 @@ main {
   color: hsl(172, 67%, 45%);
 }
 
+/*Ecran supérieur a 1024px Desktop*/
+@media (min-width: 1024px) {
+  .logo {
+    margin: 0.7rem 0 0.3rem 0;
+  }
+  .formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .formulaire .choix-pourcentage__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .formulaire .champ-personnes__erreur {
+    display: flex;
+    justify-content: space-between;
+  }
+  .resultats {
+    width: 70%;
+    height: 25rem;
+    margin-left: 1rem;
+    justify-content: space-between;
+  }
+  .resultats__total {
+    margin-top: -10rem;
+  }
+}
 .container {
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 100%, 100%);
   padding: 2.2rem;
+  border-radius: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    width: 65%;
+    justify-content: center;
+    align-self: center;
+    padding: 1rem 2rem 2rem 1rem;
+    margin: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
