@@ -7,6 +7,9 @@
         margin-bottom: 1rem;
         .prix{
             background-image: url("/images/icon-dollar.svg");
+            &.erreur-input{
+                border: 2px solid #FF4500 !important;
+            }
         }
     }
     .choix-pourcentage{
@@ -73,14 +76,20 @@
         .nb-personnes{
             background-image: url("/images/icon-person.svg");
         }
-        .erreur{
-            display: none;
-            padding-left: 2.2rem;
+        .erreur-message{
+            visibility: hidden;
             font-size: 0.7rem;
             color: rgba($color: #FF4500, $alpha: .7);
+            &.active{
+                visibility: visible
+            }
         }
-        .erreur-coleur{
+        .erreur-input{
             border: 2px solid #FF4500;
+        }
+        &__erreur{
+            display: flex;
+            justify-content: space-between;
         }
     }
 

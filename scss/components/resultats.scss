@@ -29,15 +29,19 @@
         font-weight: $fontWeight;
         color: $Green-900;
         padding: 0.6rem;
-        background-color: rgba($color: $Green-400, $alpha: .6);
+        background-color: rgba($color: $Green-400, $alpha: .2);
         border: none;
         border-radius: 0.3rem;
         width: 90%;
         margin-top: 1rem;
         align-self: center;
-        cursor: pointer;
-        &:hover{
-            background-color: $Green-400;
+        &.actif{
+            background-color: hsl(172, 67%, 45%);
+            opacity: 1;
+            cursor: pointer;
+            &:hover{
+                background-color: $Grey-200;
+            }
         }
     }
     &__montant{

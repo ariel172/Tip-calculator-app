@@ -41,6 +41,9 @@ main {
 .formulaire .champ-prix .prix {
   background-image: url("/images/icon-dollar.svg");
 }
+.formulaire .champ-prix .prix.erreur-input {
+  border: 2px solid #FF4500 !important;
+}
 .formulaire .choix-pourcentage {
   display: flex;
   flex-direction: column;
@@ -103,14 +106,20 @@ main {
 .formulaire .champ-personnes .nb-personnes {
   background-image: url("/images/icon-person.svg");
 }
-.formulaire .champ-personnes .erreur {
-  display: none;
-  padding-left: 2.2rem;
+.formulaire .champ-personnes .erreur-message {
+  visibility: hidden;
   font-size: 0.7rem;
   color: rgba(255, 69, 0, 0.7);
 }
-.formulaire .champ-personnes .erreur-coleur {
+.formulaire .champ-personnes .erreur-message.active {
+  visibility: visible;
+}
+.formulaire .champ-personnes .erreur-input {
   border: 2px solid #FF4500;
+}
+.formulaire .champ-personnes__erreur {
+  display: flex;
+  justify-content: space-between;
 }
 .formulaire .prix,
 .formulaire .nb-personnes {
@@ -167,16 +176,20 @@ main {
   font-weight: 700;
   color: hsl(183, 100%, 15%);
   padding: 0.6rem;
-  background-color: rgba(37.8675, 191.6325, 171.1305, 0.6);
+  background-color: rgba(37.8675, 191.6325, 171.1305, 0.2);
   border: none;
   border-radius: 0.3rem;
   width: 90%;
   margin-top: 1rem;
   align-self: center;
+}
+.resultats .btn-reset.actif {
+  background-color: hsl(172, 67%, 45%);
+  opacity: 1;
   cursor: pointer;
 }
-.resultats .btn-reset:hover {
-  background-color: hsl(172, 67%, 45%);
+.resultats .btn-reset.actif:hover {
+  background-color: hsl(185, 41%, 84%);
 }
 .resultats__montant {
   display: block;

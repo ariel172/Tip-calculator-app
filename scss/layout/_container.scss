@@ -1,1 +1,17 @@
 @use "../base/variables" as *;
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: $White;
+    padding: 2.2rem;
+    border-radius: 1.5rem;
+    @media (min-width:1024px) {
+        flex-direction: row;
+        width: 65%;
+        justify-content: center;
+        align-self: center;
+        padding: 1rem 2rem 2rem 1rem;
+        margin: 1rem;
+    }
+}
