@@ -14,6 +14,15 @@
         justify-content: center;
         align-items: center;
     }
+    .resultats{
+        &__montant{
+            font-size: $fontSize*2;
+            margin-top: -0.9rem;
+        }
+        .btn-reset{
+            margin-bottom: 0.5rem;
+        }
+    }
 
 }
 
@@ -21,6 +30,9 @@
 @media (min-width:1024px) {
     .logo{
         margin: 0.7rem 0 .3rem 0;
+    }
+    .container{
+        width: 75%!important;
     }
     .formulaire{
         display: flex;
@@ -43,8 +55,15 @@
         height: 25rem;
         margin-left: 1rem;
         justify-content: space-between;
+        .btn-reset{
+            margin-bottom: 1rem;
+        }
         &__total{
             margin-top: -10rem;
+        }
+        &__montant{
+            font-size: $fontSize*3;
+            margin-top: -0.9rem;
         }
     }
 }

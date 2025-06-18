@@ -64,6 +64,7 @@ main {
   cursor: pointer;
   color: hsl(0, 100%, 100%);
   background-color: hsl(183, 100%, 15%);
+  font-size: 1.2rem;
 }
 .formulaire .choix-pourcentage__btn.cliquer {
   background-color: hsl(172, 67%, 45%);
@@ -160,10 +161,10 @@ main {
 }
 .resultats__text {
   color: hsl(0, 100%, 100%);
-  font-size: 80%;
+  font-size: 85%;
 }
 .resultats__unit {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: hsl(184, 14%, 56%);
 }
 .resultats__total, .resultats__pourboire {
@@ -192,8 +193,7 @@ main {
   background-color: hsl(185, 41%, 84%);
 }
 .resultats__montant {
-  display: block;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: hsl(172, 67%, 45%);
 }
 
@@ -215,11 +215,21 @@ main {
     justify-content: center;
     align-items: center;
   }
+  .resultats__montant {
+    font-size: 2rem;
+    margin-top: -0.9rem;
+  }
+  .resultats .btn-reset {
+    margin-bottom: 0.5rem;
+  }
 }
 /*Ecran supérieur a 1024px Desktop*/
 @media (min-width: 1024px) {
   .logo {
     margin: 0.7rem 0 0.3rem 0;
+  }
+  .container {
+    width: 75% !important;
   }
   .formulaire {
     display: flex;
@@ -239,8 +249,15 @@ main {
     margin-left: 1rem;
     justify-content: space-between;
   }
+  .resultats .btn-reset {
+    margin-bottom: 1rem;
+  }
   .resultats__total {
     margin-top: -10rem;
+  }
+  .resultats__montant {
+    font-size: 3rem;
+    margin-top: -0.9rem;
   }
 }
 .container {

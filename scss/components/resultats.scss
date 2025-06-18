@@ -12,10 +12,10 @@
     margin-top: 1.5rem;
     &__text{
         color: $White;
-        font-size: 80%;
+        font-size: 85%;
     }
     &__unit{
-        font-size: .9rem;
+        font-size: 1rem;
         color: $Grey-400;
     }
     &__total, 
@@ -45,8 +45,7 @@
         }
     }
     &__montant{
-        display: block;
-        font-size: $fontSize*1.5;
+        font-size: $fontSize*1.6;
         color: $Green-400;
     }
 }
