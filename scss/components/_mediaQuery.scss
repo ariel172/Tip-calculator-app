@@ -1,8 +1,21 @@
 @use "../base/variables" as *;
-@use "../components/logo";
-@use "../components/form";
-@use "../components/resultats.scss";
+@use "logo";
+@use "form";
+@use "resultats.scss";
+@use "footer.scss";
 
+
+/*Ecran supérieur a 768px Tablette*/
+@media (min-width: 768px){
+    .container{
+        width: 50%;
+    }
+    main{
+        justify-content: center;
+        align-items: center;
+    }
+
+}
 
 /*Ecran supérieur a 1024px Desktop*/
 @media (min-width:1024px) {

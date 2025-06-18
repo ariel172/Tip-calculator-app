@@ -206,6 +206,16 @@ main {
   color: hsl(172, 67%, 45%);
 }
 
+/*Ecran supérieur a 768px Tablette*/
+@media (min-width: 768px) {
+  .container {
+    width: 50%;
+  }
+  main {
+    justify-content: center;
+    align-items: center;
+  }
+}
 /*Ecran supérieur a 1024px Desktop*/
 @media (min-width: 1024px) {
   .logo {
