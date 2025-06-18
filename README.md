@@ -113,4 +113,4 @@ These resources were essential to help me make informed decisions and stay confi
 
 - Website - [Yamien Ariel](https://github.com/ariel172)
 - Frontend Mentor - [@ariel172](https://www.frontendmentor.io/profile/ariel172)
-- CodePen - [@yamienariel](https://www.twitter.com/yamienariel)
+- CodePen - [@yamienariel](https://codepen.io/yamienariel)
