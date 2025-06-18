@@ -14,9 +14,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -30,83 +27,90 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/ariel172/Tip-calculator-app)
+- Live Site URL: [Vercel](https://tip-calculator-app-ariel.vercel.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Semantic **HTML5** markup  
+- **SCSS** with modular architecture using `@use`  
+- **Flexbox** and **CSS Grid** for layout  
+- **Mobile-first workflow**  
+- **Vanilla JavaScript** – no framework  
+- Reusable, pure functions for DOM manipulation and calculation  
+- Clear state handling (`disabled`, `hover`, `focus`, `error`)  
+- **BEM-style** CSS naming convention (adapted in French)
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+## 📚 What I learned
 
-To see how you can add code snippets, see below:
+This project helped me deepen my understanding of **DOM manipulation**, **function decomposition**, and the importance of keeping code **DRY** (Don't Repeat Yourself).  
+I learned to separate concerns by creating **small reusable functions** for logic, validation, and updates.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+One of the main improvements was the creation of this reusable validation function:
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function verifierChamp(elementInput, valeur, afficherErreur = null) {
+  const estValide = !isNaN(valeur) && valeur > 0;
+  elementInput.classList.toggle("erreur-input", !estValide);
+  if (afficherErreur) {
+    afficherErreur.classList.toggle("active", !estValide);
+  }
+  return estValide;
 }
+I also learned how to dynamically toggle a button's state using data-driven logic:
+function mettreAJourEtatBoutonReset() {
+  const actif = auMoinsUnChampRempli();
+  inputReset.disabled = !actif;
+  inputReset.classList.toggle("actif", actif);
+}
+This helped me structure my JavaScript in a more modular and readable way.
+
+In CSS, I practiced mobile-first design and media queries to build responsive layouts.
+I also made use of SCSS modules to separate components and avoid clutter.
+// Example of a component-focused SCSS structure
+.formulaire {
+  .champ-prix {
+    display: flex;
+    flex-direction: column;
+    .prix.erreur-input {
+      border: 2px solid #FF4500;
+    }
+  }
+}
+Overall, this challenge reinforced the importance of clean structure, refactoring early, and progressive enhancement.
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+### 🔄 Continued development
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+As I continue to learn and build more projects, I want to focus on... :
 
-### Continued development
+- **Form validation**: I'd like to improve the way I handle validation errors for different types of input, including accessibility (ARIA roles, focus management).
+- **State management**: While this project doesn't require complex state, I want to better understand how to cleanly manage shared state, especially in React or when scaling vanilla JavaScript applications.
+- Advanced responsive design**: I want to improve and better manage breakpoints for tablets and ultra-wide screens.
+- Testing JavaScript logic**: I've seen how useful reusable functions can be. In future projects, I want to learn how to write unit tests for logic like `verifierChamp()` and `calculerPourboire()`.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+These areas will help me write more robust, accessible and scalable web applications.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-### Useful resources
+### 📚 Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [OpenClassrooms Web Courses](https://openclassrooms.com) – I applied what I learned from courses like *"Create dynamic web pages with JavaScript"* and *"Manage code with Git and GitHub"* which helped me structure my code and follow good practices.
+- [Frontend Mentor README and design files] – These provided a clear UI structure and requirements that guided me through the project from layout to behavior.
+- [ChatGPT by OpenAI](https://chat.openai.com) – I used AI support to clarify concepts I wasn't sure.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+These resources were essential to help me make informed decisions and stay confident as I built the app.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Yamien Ariel](https://github.com/ariel172)
+- Frontend Mentor - [@ariel172](https://www.frontendmentor.io/profile/ariel172)
+- CodePen - [@yamienariel](https://www.twitter.com/yamienariel)
